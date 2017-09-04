@@ -1,21 +1,24 @@
-# make-license
+# all
 
-> 登录授权
+> 完整前后端，数据库
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+## 步骤
+### 1.进入all文件夹，执行
+```angular2html
+npm install --save
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 2.进入service文件夹，执行
+```angular2html
+npm install
+```
+
+### 3.进入all文件夹(其前端服务)，执行
+```angular2html
+npm run dev
+```
+
+### 2.进入service文件夹(起后台服务)，执行
+```angular2html
+node index.js
+```

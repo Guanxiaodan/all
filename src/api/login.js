@@ -4,6 +4,7 @@
  */
 const axios = require('axios');
 
+// const BASE_URL = 'http://school.magic-cloud.cn:6600';
 const BASE_URL = 'http://localhost:8000';
 
 const $http = axios.create({

@@ -50,7 +50,7 @@
   .container-all {
     width: 100%;
     height: 100%;
-    background: url("../assets/bg.jpg") no-repeat;
+    background: url("../assets/flower.jpg") no-repeat;
     background-size: cover;
   }
 
@@ -75,7 +75,8 @@
 
 <template>
   <div class="flex-c center container-all">
-    <div class="container-border flex-c m-around">
+    <h1 style="font-size: 3rem; color: #F7F7F0; margin-bottom: 4rem; letter-spacing: 8px;">智慧班牌授权管理平台</h1>
+    <div class="container-border flex-c m-around ">
       <div>
         <h2>请输入用户名：</h2>
         <Input class="to-top" v-model="name" placeholder="请输入用户名..." style="width: 300px"></Input>
@@ -96,6 +97,7 @@
   const login = require('../api/login');
   const _ = require('lodash');
   const md5 = require('md5');
+  const userStore = require('../api/userApi');
 
   export default {
     data() {
@@ -126,6 +128,8 @@
           this.$Notice.success({
             title: '登录成功！',
           });
+          // 存储用户信息
+          userStore.setName(this.name);
           // 页面跳转
           window.location.hash = '/choose';
         }).catch((err) => {

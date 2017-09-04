@@ -70,26 +70,16 @@
     box-shadow: 0 0 2px rgba(0, 0, 0, .3), 0 1px 8px rgba(0, 0, 0, .3);
   }
 
-  .back {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3rem;
-    color: red;
-    margin-top: 2rem;
-    cursor: pointer;
-  }
 </style>
 
 <template>
   <div class="flex-c cover">
-    <div style="text-align: right;">
-      <span class="back" @click="skip('login')">退 出</span>
-    </div>
+    <heads></heads>
     <div class=" flex-c center" style="height: 75%">
       <div style="width:30rem; height: 15rem;" class="flex-r between">
         <div class="flex-c border" @click="skip('authorize')">
           <img src="../assets/aut.png" class="img">
-          <h1>获取授权码</h1>
+          <h1>创建授权</h1>
         </div>
         <div class="flex-c border" @click="skip('logs')">
           <img src="../assets/log.png" class="img">
@@ -102,23 +92,26 @@
 </template>
 
 <script>
-//  const debug = require('debug')('choose');
+  /* eslint-disable object-shorthand */
+
+  //  const debug = require('debug')('choose');
+  const heads = require('../components/header.vue');
 
   export default {
     data() {
-      return {
-      };
+      return {};
     },
     methods: {
       skip(path) {
         if (path === 'authorize') {
           window.location.hash = '/authorize';
-        } else if (path === 'logs') {
-          window.location.hash = '/logs';
         } else {
-          window.location.hash = '/';
+          window.location.hash = '/logs';
         }
       },
+    },
+    components: {
+      heads: heads,
     },
   };
 </script>

@@ -75,7 +75,7 @@
 
 <template>
   <div class="flex-c center container-all">
-    <h1 style="font-size: 3rem; color: #F7F7F0; margin-bottom: 4rem; letter-spacing: 8px;">智慧班牌授权管理平台</h1>
+    <h1 style="font-size: 3rem; color: #F7F7F0; margin-bottom: 4rem; letter-spacing: 8px;">前后端学习平台</h1>
     <div class="container-border flex-c m-around ">
       <div>
         <h2>请输入用户名：</h2>
